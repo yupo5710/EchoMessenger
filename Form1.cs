@@ -13,7 +13,15 @@ namespace EchoMessenger
         }
 
         private void btnSend_Click(object sender, EventArgs e)
+
         {
+            if (txtMessege.Text.Length > 50)
+            {
+                MessageBox.Show("메시지는 50자를 넘길 수 없습니다.");
+                txtMessege.Text = txtMessege.Text.Substring(0, 50);
+                txtMessege.SelectionStart = txtMessege.Text.Length; // 커서 맨 뒤로 이동
+            }
+
             if (!string.IsNullOrWhiteSpace(txtMessege.Text))
             {
                 string timeStamp = DateTime.Now.ToString("HH:mm:ss"); //현재 시간을 "HH:mm:ss" 형식으로 문자열로 변환하여 timeStamp 변수에 저장
@@ -51,6 +59,29 @@ namespace EchoMessenger
         private void Form1_Load(object sender, EventArgs e)
         {
             lblCount.Text = "메세지 수 : 0개"; //처음 작동할때 메세지 수 0개로 초기화
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //메세지 삭제 기능
+            if (lbChatLog.SelectedIndex != -1)
+            {
+                lbChatLog.Items.RemoveAt(lbChatLog.SelectedIndex);
+
+                // 메시지 수 업데이트
+                lblCount.Text = $"메세지 수 : {lbChatLog.Items.Count}개";
+            }
+            else
+            {
+                MessageBox.Show("삭제할 메시지를 선택하세요.");
+            }
+
+        }
+
+        private void btnAllDelete_Click(object sender, EventArgs e)
+        {
+            lbChatLog.Items.Clear();
+            lblCount.Text = "메세지 수 : 0개";
         }
     }
 }
