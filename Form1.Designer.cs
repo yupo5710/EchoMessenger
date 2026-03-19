@@ -80,7 +80,7 @@
             txtMessage.Size = new Size(1157, 107);
             txtMessage.TabIndex = 4;
             txtMessage.TextChanged += txtMessage_TextChanged;
-            txtMessage.KeyDown += txtMessage_KeyDown;)
+            txtMessage.KeyDown += txtMessage_KeyDown;
             // 
             // lblCount
             // 
