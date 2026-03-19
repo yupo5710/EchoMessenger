@@ -32,6 +32,7 @@
             btnSend = new Button();
             lbChatLog = new ListBox();
             txtMessege = new TextBox();
+            lblCount = new Label();
             SuspendLayout();
             // 
             // labelEchoMessenger
@@ -79,11 +80,19 @@
             txtMessege.TextChanged += txtMessege_TextChanged;
             txtMessege.KeyDown += txtMessege_KeyDown;
             // 
+            // lblCount
+            // 
+            lblCount.Location = new Point(40, 715);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(219, 43);
+            lblCount.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 960);
+            Controls.Add(lblCount);
             Controls.Add(txtMessege);
             Controls.Add(lbChatLog);
             Controls.Add(btnSend);
@@ -91,6 +100,7 @@
             Margin = new Padding(6);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -101,5 +111,6 @@
         private Button btnSend;
         private ListBox lbChatLog;
         private TextBox txtMessege;
+        private Label lblCount;
     }
 }
