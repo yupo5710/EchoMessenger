@@ -83,6 +83,33 @@
 - Trim()으로 앞뒤 공백을 제거해 깔끔한 메시지를 만든다.  
   사용한 코드:  
   `string TrimMessege = txtMessege.Text.Trim();`
+---
+---
+
+## 실행 화면 (과제4)
+
+- 과제4 코드의 실행 스크린샷  
+  ![과제4 실행화면](img/screenshot-4.png)
+
+### - 과제 내용
+- ListBox에서 선택한 항목만 삭제하는 기능을 구현한다.
+- '전체 삭제’ 버튼을 클릭하면 ListBox의 모든 메시지를 한 번에 초기화한다.
+- 입력창(TextBox)의 글자 수를 50자로 제한하고,초과 입력 시 경고 메시지를 띄우거나 전송을 차단한다.
+
+
+
+
+### - 구현 내용과 기능 설명
+- 선택한 메시지를 삭제할 수 있다.  
+  사용한 코드:  
+  `lbChatLog.Items.RemoveAt(ChatLog.SelectedIndex);`))
+- 전체 메시지를 한 번에 삭제할 수 있다.  
+  사용한 코드:  
+  `lbChatLog.Items.Clear();`
+- 입력창 글자 수를 50자로 제한하고 초과 시 경고 메시지를 띄운다.  
+  사용한 코드:  
+  `if (txtMessege.Text.Length > 50) { MessegeBox.Show("50자 제한"); }`
+
 
 
 
