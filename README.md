@@ -82,7 +82,7 @@
   `lblCount.Text = $"메세지 수 : {ChatLog.Items.Count}개";`
 - Trim()으로 앞뒤 공백을 제거해 깔끔한 메시지를 만든다.  
   사용한 코드:  
-  `string TrimMessege = txtMessege.Text.Trim();`
+  `string TrimMessage = txtMessage.Text.Trim();`
 ---
 ---
 

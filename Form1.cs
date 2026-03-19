@@ -15,21 +15,21 @@ namespace EchoMessenger
         private void btnSend_Click(object sender, EventArgs e)
 
         {
-            if (txtMessege.Text.Length > 50)
+            if (txtMessage.Text.Length > 50)
             {
                 MessageBox.Show("메시지는 50자를 넘길 수 없습니다.");
-                txtMessege.Text = txtMessege.Text.Substring(0, 50);
-                txtMessege.SelectionStart = txtMessege.Text.Length; // 커서 맨 뒤로 이동
+                txtMessage.Text = txtMessage.Text.Substring(0, 50);
+                txtMessage.SelectionStart = txtMessage.Text.Length; // 커서 맨 뒤로 이동
             }
 
-            if (!string.IsNullOrWhiteSpace(txtMessege.Text))
+            if (!string.IsNullOrWhiteSpace(txtMessage.Text))
             {
                 string timeStamp = DateTime.Now.ToString("HH:mm:ss"); //현재 시간을 "HH:mm:ss" 형식으로 문자열로 변환하여 timeStamp 변수에 저장
-                string TrimMessege = txtMessege.Text.Trim(); //텍스트 박스에서 입력된 메시지의 앞뒤 공백을 제거하여 TrimMessege 변수에 저장
-                string typedMsg = $"[{timeStamp}] {TrimMessege}"; // 시간과 메시지를 함께 표시
+                string TrimMessage = txtMessage.Text.Trim(); //텍스트 박스에서 입력된 메시지의 앞뒤 공백을 제거하여 TrimMessege 변수에 저장
+                string typedMsg = $"[{timeStamp}] {TrimMessage}"; // 시간과 메시지를 함께 표시
                 lbChatLog.Items.Add(typedMsg); //result 변수를 채팅 로그 리스트 박스에 추가하여 메시지를 표시
-                txtMessege.Clear(); //텍스트 박스의 내용을 지워서 다음 메시지를 입력할 수 있도록 준비
-                txtMessege.Focus(); //채팅 이동후 커서가 다시 채팅 입력창 이동
+                txtMessage.Clear(); //텍스트 박스의 내용을 지워서 다음 메시지를 입력할 수 있도록 준비
+                txtMessage.Focus(); //채팅 이동후 커서가 다시 채팅 입력창 이동
 
                 lblCount.Text = $"메세지 수 : {lbChatLog.Items.Count}개";
             }
@@ -40,12 +40,12 @@ namespace EchoMessenger
 
         }
 
-        private void txtMessege_TextChanged(object sender, EventArgs e)
+        private void txtMessage_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtMessege_KeyDown(object sender, KeyEventArgs e)
+        private void txtMessage_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

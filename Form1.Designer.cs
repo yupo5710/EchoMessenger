@@ -31,7 +31,7 @@
             labelEchoMessenger = new Label();
             btnSend = new Button();
             lbChatLog = new ListBox();
-            txtMessege = new TextBox();
+            txtMessage = new TextBox();
             lblCount = new Label();
             btnDelete = new Button();
             btnAllDelete = new Button();
@@ -74,13 +74,13 @@
             // 
             // txtMessege
             // 
-            txtMessege.Location = new Point(40, 761);
-            txtMessege.Multiline = true;
-            txtMessege.Name = "txtMessege";
-            txtMessege.Size = new Size(1157, 107);
-            txtMessege.TabIndex = 4;
-            txtMessege.TextChanged += txtMessege_TextChanged;
-            txtMessege.KeyDown += txtMessege_KeyDown;
+            txtMessage.Location = new Point(40, 761);
+            txtMessage.Multiline = true;
+            txtMessage.Name = "txtMessege";
+            txtMessage.Size = new Size(1157, 107);
+            txtMessage.TabIndex = 4;
+            txtMessage.TextChanged += txtMessage_TextChanged;
+            txtMessage.KeyDown += txtMessage_KeyDown;)
             // 
             // lblCount
             // 
@@ -117,7 +117,7 @@
             Controls.Add(btnAllDelete);
             Controls.Add(btnDelete);
             Controls.Add(lblCount);
-            Controls.Add(txtMessege);
+            Controls.Add(txtMessage);
             Controls.Add(lbChatLog);
             Controls.Add(btnSend);
             Controls.Add(labelEchoMessenger);
@@ -134,7 +134,7 @@
         private Label labelEchoMessenger;
         private Button btnSend;
         private ListBox lbChatLog;
-        private TextBox txtMessege;
+        private TextBox txtMessage;
         private Label lblCount;
         private Button btnDelete;
         private Button btnAllDelete;
