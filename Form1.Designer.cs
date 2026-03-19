@@ -31,7 +31,7 @@
             labelEchoMessenger = new Label();
             btnSend = new Button();
             lbChatLog = new ListBox();
-            txtMessage = new TextBox();
+            txtMessege = new TextBox();
             SuspendLayout();
             // 
             // labelEchoMessenger
@@ -71,20 +71,20 @@
             // 
             // txtMessege
             // 
-            txtMessage.Location = new Point(40, 761);
-            txtMessage.Multiline = true;
-            txtMessage.Name = "txtMessege";
-            txtMessage.Size = new Size(1157, 107);
-            txtMessage.TabIndex = 4;
-            txtMessage.TextChanged += txtMessage_TextChanged;
-            txtMessage.KeyDown += txtMessage_KeyDown;
+            txtMessege.Location = new Point(40, 761);
+            txtMessege.Multiline = true;
+            txtMessege.Name = "txtMessege";
+            txtMessege.Size = new Size(1157, 107);
+            txtMessege.TabIndex = 4;
+            txtMessege.TextChanged += txtMessege_TextChanged;
+            txtMessege.KeyDown += txtMessege_KeyDown;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 960);
-            Controls.Add(txtMessage);
+            Controls.Add(txtMessege);
             Controls.Add(lbChatLog);
             Controls.Add(btnSend);
             Controls.Add(labelEchoMessenger);
@@ -100,6 +100,6 @@
         private Label labelEchoMessenger;
         private Button btnSend;
         private ListBox lbChatLog;
-        private TextBox txtMessage;
+        private TextBox txtMessege;
     }
 }
