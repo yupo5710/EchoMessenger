@@ -63,5 +63,26 @@
 - 공백 또는 빈 문자열일 경우 메시지가 전송되지 않도록 방어 로직이 적용됨.  
   사용한 코드:  
   `if (!string.IsNullOrWhiteSpace(txtMessege.Text)) { // 메시지 전송 처리 }`
+ ---
+ # 실행 화면 (과제3)
+
+- 과제3 코드의 실행 스크린샷  
+  ![과제3 실행화면](img/screenshot-3.png)
+
+### - 과제 내용
+- 메시지 앞에 현재 시간(타임스탬프)을 자동으로 붙여 출력
+- 현재까지 입력된 메시지 개수를 Label에 실시간으로 표시합니다.
+- 사용자가 입력한 메시지의 앞뒤 공백을 Trim()으로 제거하여 저장합니다.
+### - 구현 내용과 기능 설명
+- 메시지 앞에 현재 시간이 자동으로 붙는다.  
+  사용한 코드:  
+  `string timeStamp = DateTime.Now.ToString("HH:mm:ss");`
+- 메시지 개수를 Label에 표시한다.  
+  사용한 코드:  
+  `lblCount.Text = $"메세지 수 : {ChatLog.Items.Count}개";`
+- Trim()으로 앞뒤 공백을 제거해 깔끔한 메시지를 만든다.  
+  사용한 코드:  
+  `string TrimMessege = txtMessege.Text.Trim();`
+
 
 
