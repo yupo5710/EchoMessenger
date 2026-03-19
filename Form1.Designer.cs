@@ -72,11 +72,11 @@
             lbChatLog.TabIndex = 3;
             lbChatLog.SelectedIndexChanged += lbChatLog_SelectedIndexChanged;
             // 
-            // txtMessege
+            // txtMessage
             // 
             txtMessage.Location = new Point(40, 761);
             txtMessage.Multiline = true;
-            txtMessage.Name = "txtMessege";
+            txtMessage.Name = "txtMessage";
             txtMessage.Size = new Size(1157, 107);
             txtMessage.TabIndex = 4;
             txtMessage.TextChanged += txtMessage_TextChanged;
@@ -101,7 +101,7 @@
             // 
             // btnAllDelete
             // 
-            btnAllDelete.Location = new Point(1190, 64);
+            btnAllDelete.Location = new Point(1171, 64);
             btnAllDelete.Name = "btnAllDelete";
             btnAllDelete.Size = new Size(150, 46);
             btnAllDelete.TabIndex = 7;
