@@ -70,7 +70,7 @@
     사용한 코드:  
     `if (!string.IsNullOrWhiteSpace(txtMessege.Text)) { // 메시지 전송 처리 }`
 
- # 실행 화면 (과제3)
+ ## 실행 화면 (과제3)
 
 - 과제3 코드의 실행 스크린샷  
   ![과제3 실행화면](img/screenshot-3.png)     
